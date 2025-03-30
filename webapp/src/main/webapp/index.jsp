@@ -45,11 +45,10 @@
             font-size: 16px;
             transition: all 0.3s;
             text-align: center;
+            margin-bottom: 20px;
         }
-        .form-control::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-            text-align: center;
-        }
+        
+        
         .form-control:focus {
             border-color: cyan;
             box-shadow: 0 0 20px cyan;
