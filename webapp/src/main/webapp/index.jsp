@@ -80,7 +80,7 @@
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        /* Текстовые эффекты */
+
         h2, p, label, h5, .signin a {
             transition: color 0.3s, text-shadow 0.3s;
         }
