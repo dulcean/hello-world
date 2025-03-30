@@ -10,8 +10,9 @@
         body, html {
             height: 100%;
             margin: 0;
-            overflow: hidden;
             font-family: 'JetBrains Mono', 'Noto Sans', sans-serif;
+            background: #0e0e0e;
+            color: #fff;
         }
         .background {
             position: fixed;
@@ -21,32 +22,37 @@
             height: 100%;
             z-index: -1;
             background: url('https://i.gifer.com/fzUl.gif') no-repeat center center/cover;
-            filter: blur(4px);
+            filter: blur(6px);
             opacity: 0.85;
         }
         .glass-container {
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0px 4px 30px rgba(0, 255, 255, 0.4);
+            background: transparent; 
+            padding: 40px 60px;
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            animation: fadeIn 1.5s ease-in-out;
-            text-align: center;
+            border: 1px solid rgba(0, 255, 255, 0.4);
+            border-radius: 18px;
+            max-width: 600px;
+            width: 90%;
+            animation: fadeIn 1.2s ease-in-out;
         }
         .form-control {
-            border-radius: 8px;
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 255, 255, 0.5);
+            background: rgba(0, 0, 0, 0.6);
             color: #fff;
+            padding: 15px;
+            font-size: 16px;
+            transition: all 0.3s;
             text-align: center;
         }
         .form-control::placeholder {
             color: rgba(255, 255, 255, 0.5);
+            text-align: center;
         }
         .form-control:focus {
             border-color: cyan;
-            box-shadow: 0 0 12px cyan;
+            box-shadow: 0 0 20px cyan;
         }
         .btn-neon {
             background-color: transparent;
@@ -54,6 +60,8 @@
             color: cyan;
             font-weight: bold;
             transition: 0.4s;
+            padding: 12px;
+            font-size: 18px;
         }
         .btn-neon:hover {
             background-color: cyan;
@@ -67,30 +75,37 @@
         .signin a:hover {
             text-shadow: 0 0 10px cyan;
         }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        /* Неоновая подсветка текста */
+        /* Текстовые эффекты */
         h2, p, label, h5, .signin a {
-            color: #fff;
             transition: color 0.3s, text-shadow 0.3s;
         }
         h2:hover, p:hover, label:hover, h5:hover, .signin a:hover {
             color: cyan;
             text-shadow: 0 0 15px cyan;
         }
+        /* Центрирование */
+        .center-container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
 
-<!-- Анимированный GIF-фон -->
 <div class="background"></div>
 
-<div class="container d-flex justify-content-center align-items-center min-vh-100">
-    <div class="glass-container col-md-6 col-lg-5 text-white">
-        <h2 class="text-center">🚀 New User Registration</h2>
-        <p class="text-muted">Fill in the form to create an account</p>
+<div class="center-container">
+    <div class="glass-container">
+        <h2 class="text-center">New User Registration</h2>
+        <p class="text-muted text-center">Fill in the form to create an account</p>
         <hr class="border border-light">
 
         <form action="action_page.php" method="POST">
@@ -137,7 +152,7 @@
         </div>
 
         <hr class="border border-light">
-        <h5 class="text-center text-success">✨ Thank you, Happy Learning! ✨</h5>
+        <h5 class="text-center text-success">Thank you, Happy Learning!</h5>
     </div>
 </div>
 
