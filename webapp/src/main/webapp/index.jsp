@@ -87,7 +87,6 @@
             color: cyan;
             text-shadow: 0 0 15px cyan;
         }
-        /* Центрирование */
         .center-container {
             min-height: 100vh;
             display: flex;
